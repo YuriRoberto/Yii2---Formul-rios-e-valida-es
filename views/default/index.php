@@ -23,10 +23,10 @@ use \yii\helpers\Html;
 
 <?php echo Html::label('Cidades', '')?>
 <?php echo \yii\helpers\Html::dropDownList('cidade', '', [
-    1 => "Juazeiro",
-    2 => "Salvador",
-    3 => "Camumu",
-    4 => "itabuna"
+    "Juazeiro" => "Juazeiro",
+    "Salvador" => "Salvador",
+    "Camumu" => "Camumu",
+    "itabuna" => "itabuna"
 ], ['prompt' => "Selecione", 'class' => 'form-control']); ?>
 <hr>
 

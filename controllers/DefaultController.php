@@ -2,6 +2,11 @@
 
 namespace app\controllers;
 
+use app\models\forms\ProdutoForm;
+use yii\helpers\VarDumper;
+use yii\web\Response;
+use yii\widgets\ActiveForm;
+
 class DefaultController extends \yii\web\Controller
 {
     public function actionIndex()
@@ -20,6 +25,16 @@ class DefaultController extends \yii\web\Controller
         }
 
         return $this->render('index');
+    }
+
+    public function actionProduto(){
+
+        $form = new ProdutoForm();
+        
+        return $this->render('produto', [
+            'model' => $form
+        ]);
+
     }
 
 }
