@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-
+use \yii\helpers\Html;
 ?>
 <!--
 <h1>default/index</h1>
@@ -11,6 +11,8 @@
 </p>
 -->
 
+<h1>Criando form com HTML Helper</h1>
+
 <?php echo \yii\helpers\Html::beginForm() ?>
 
 <?php echo \yii\helpers\Html::label('Nome', '') ?>
@@ -18,12 +20,15 @@
     'class' => 'form-control'
 ]) ?>
 
-<?php echo \yii\helpers\Html::dropDownList('Cidades', '', [
+
+<?php echo Html::label('Cidades', '')?>
+<?php echo \yii\helpers\Html::dropDownList('cidade', '', [
     1 => "Juazeiro",
     2 => "Salvador",
     3 => "Camumu",
     4 => "itabuna"
 ], ['prompt' => "Selecione", 'class' => 'form-control']); ?>
+<hr>
 
 <?php echo \yii\helpers\Html::button('Enviar', ['type' => 'submit', 'class' => 'btn btn-primary']) ?>
 
